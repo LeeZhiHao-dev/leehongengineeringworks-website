@@ -4,9 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lorry Rental - Lee Hong Engineering Works</title>
-<link rel="icon" type="image/x-icon" href="../Img/favicon_1.png">
-<link rel="stylesheet" href="../css/style.css">
-
+<link rel="icon" type="image/x-icon" href="img/favicon_1.png">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,35 +14,33 @@
 <header>
     <nav class="navbar">
         <div class="nav-logo">
-            <li><a href="/index.html" target="_blank"><img src="../img/logo_nav.png" alt="LH Engineering Logo"></a></li>
+            <li><a href="index.html" target="_blank"><img src="img/logo_nav.png" alt="LH Engineering Logo"></a></li>
         </div>
 
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="hamburger">☰</label>
 
-		<div class="nav-center">
-	        <ul class="nav-links">
-            	<li><a href="../html/about.html" target="_blank">ABOUT US</a></li>
-            	<li><a href="../html/service.html" target="_blank">SERVICE</a></li>
-            	<li><a href="../html/gallery.html" target="_blank">GALLERY</a></li>
-            	<li><a href="../html/contact.html" target="_blank">CONTACT US</a></li>
-        	</ul>
-		</div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="html/about.html" target="_blank">ABOUT US</a></li>
+                <li><a href="html/service.html" target="_blank">SERVICE</a></li>
+                <li><a href="html/gallery.html" target="_blank">GALLERY</a></li>
+                <li><a href="html/contact.html" target="_blank">CONTACT US</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
-	
+
 <!-- ✅ HERO SECTION -->
 <section class="hero">
+    <div class="service-hero-bg"></div>
 
-	<div class="service-hero-bg"></div>
-
-	<!-- Centered Text -->
-	<div class="get-in-touch-box">
-    	<p>Our Service</p>
-    	<h2>LORRY RENTAL</h2>
+    <div class="get-in-touch-box">
+        <p>Our Service</p>
+        <h2>LORRY RENTAL</h2>
     </div>
 
-	<div class="shape shape1"></div>
+    <div class="shape shape1"></div>
     <div class="shape shape2"></div>
     <div class="shape shape3"></div>
 </section>
@@ -56,7 +53,7 @@
 <!-- SERVICE DETAILS: IMAGE LEFT, TEXT RIGHT -->
 <section class="service-details">
     <div class="service-image">
-        <img src="../img/lorryhantu-rental.jpeg" alt="Lorry Rental">
+        <img src="img/lorryhantu-rental.jpeg" alt="Lorry Rental">
     </div>
     <div class="service-text">
         <p>We exclusively rent <span>Lorry Hantu and Back Pusher</span>, providing reliable and fully serviced vehicles for all your transport needs.</p>
@@ -64,7 +61,7 @@
             <li>Lorry Hantu Rental</li>
             <li>Back Pusher Rental</li>
         </ul>
-        <a href="../html/contact.html" target="_blank" class="cta-btn"><span style="font-weight: 300; font-family: 'Fira Sans Medium'">Contact Us</span></a>
+        <a href="html/contact.html" target="_blank" class="cta-btn"><span style="font-weight: 300; font-family: 'Fira Sans Medium'">Contact Us</span></a>
     </div>
 </section>
 
@@ -72,99 +69,88 @@
 <section class="view-gallery">
     <h3>To View Our Gallery</h3>
     <p>See our latest projects and explore how we keep lorries safe, reliable, and road-ready.</p>
-    <a href="../html/gallery.html" target="_blank" class="cta-btn"><span style="font-weight: 300; font-family: 'Fira Sans Medium'">View Gallery</span></a>
-	
-	<button id="backToTop">↑</button>
-	<script>
-    const btn = document.getElementById("backToTop");
+    <a href="html/gallery.html" target="_blank" class="cta-btn"><span style="font-weight: 300; font-family: 'Fira Sans Medium'">View Gallery</span></a>
 
-    window.onscroll = function () {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            btn.style.display = "flex";
-        } else {
-            btn.style.display = "none";
-        }
-    };
+    <button id="backToTop">↑</button>
+    <script>
+        const btn = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+        btn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
 
-    btn.onclick = function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
-	</script>
-	
-	<button id="scrollDown">↓</button>
-	<script>
-	const downBtn = document.getElementById("scrollDown");
-
-	/* 点击往下滑 600px（你可以调整） */
-	downBtn.onclick = function () {
-    window.scrollBy({
-        top: 600,
-        behavior: "smooth"
-		});
-	};
-	</script>
+    <button id="scrollDown">↓</button>
+    <script>
+        const downBtn = document.getElementById("scrollDown");
+        downBtn.onclick = function () {
+            window.scrollBy({ top: 600, behavior: "smooth" });
+        };
+    </script>
 </section>
 
+<!-- FOOTER -->
 <footer id="footer">
-
-	<div class="footer-top">
-		<div class="footer-text" style="padding: 40px 80px">
-			<h2 style="color: #FFFFFF; font-family: 'Fira Sans Medium'; font-size: 40px; font-weight: 500;">GET STARTED WITH US</h2><br>
-     		<a href="../html/contact.html" target="_blank" class="btn-orange" style="font-family: 'Fira Sans Medium'; font-weight: 300;">Contact Us</a>
-		</div>
-	</div>
+    <div class="footer-top">
+        <div class="footer-text" style="padding: 40px 80px">
+            <h2 style="color: #FFFFFF; font-family: 'Fira Sans Medium'; font-size: 40px; font-weight: 500;">GET STARTED WITH US</h2><br>
+            <a href="html/contact.html" target="_blank" class="btn-orange" style="font-family: 'Fira Sans Medium'; font-weight: 300;">Contact Us</a>
+        </div>
+    </div>
 
     <div class="footer-content">
         <div class="footer-col">
-            <a href="/index.html"><img src="../img/footer-logo.png" alt="footer-logo" class="footer-logo"></a>
+            <a href="index.html"><img src="img/footer-logo.png" alt="footer-logo" class="footer-logo"></a>
             <p>We are here to keep your lorry safe, reliable, and road-ready.</p>
-			<div class="social-media-icon">
-				<a href="https://www.facebook.com/profile.php?id=100063841941473" target="_blank"><img src="../img/facebook-white.png" alt="facebook icon"></a>
-				<a href="https://www.instagram.com/jian_jzl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="../img/instagram-white.png" alt="instagram icon"></a>
-				<a href="https://www.tiktok.com/@lzj1125?_r=1&_t=ZS-923WlDM2mSG" target="_blank"><img src="../img/tiktok-white.png" alt="tiktok icon"></a>
-			</div>
+            <div class="social-media-icon">
+                <a href="https://www.facebook.com/profile.php?id=100063841941473" target="_blank"><img src="img/facebook-white.png" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/jian_jzl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="img/instagram-white.png" alt="instagram icon"></a>
+                <a href="https://www.tiktok.com/@lzj1125?_r=1&_t=ZS-923WlDM2mSG" target="_blank"><img src="img/tiktok-white.png" alt="tiktok icon"></a>
+            </div>
         </div>
 
         <div class="footer-col">
             <h4 style="color: white;">OFFICE</h4>
-			<div class="location">
-				<img src="../img/maps-and-flags-icon.png" alt="location icon">
-            	<a href="https://maps.app.goo.gl/ENGpoYV7YYNBGUQVA" target="_blank"><p>Plot 16050, Jalan, 31550 <br> Batu Gajah, Perak</p></a>
-			</div>
-			
-			<div class="phone">
-				<img src="../img/whatsapp-icon.png" alt="whatsapp-icon">
-				<div class="contact-number">
-					<a href="https://wa.me/60125188117" target="_blank"><p style="padding-bottom: 0px;">+60 12-5188117 <br> <span>(Mr. Lee Chee Heng)</span></p></a> 
-					<a href="https://wa.me/60165173297" target="_blank"><p>+60 16-5173297 <br> <span>(Mr. Lee Zhi Jian)</span></p></a>
-				</div>
-			</div>
+            <div class="location">
+                <img src="img/maps-and-flags-icon.png" alt="location icon">
+                <a href="https://maps.app.goo.gl/ENGpoYV7YYNBGUQVA" target="_blank"><p>Plot 16050, Jalan, 31550 <br> Batu Gajah, Perak</p></a>
+            </div>
+            <div class="phone">
+                <img src="img/whatsapp-icon.png" alt="whatsapp-icon">
+                <div class="contact-number">
+                    <a href="https://wa.me/60125188117" target="_blank"><p style="padding-bottom: 0px;">+60 12-5188117 <br> <span>(Mr. Lee Chee Heng)</span></p></a> 
+                    <a href="https://wa.me/60165173297" target="_blank"><p>+60 16-5173297 <br> <span>(Mr. Lee Zhi Jian)</span></p></a>
+                </div>
+            </div>
         </div>
 
         <div class="footer-col">
             <h4 style="color: white;">SERVICES</h4>
-            <a href="../html/lorryrepair.html">Lorry Repair</a><br>
-            <a href="../html/lorryinstallation.html">Lorry Installation</a><br>
-            <a href="../html/lorryrental.html">Lorry Rental</a>
+            <a href="html/lorryrepair.html">Lorry Repair</a><br>
+            <a href="html/lorryinstallation.html">Lorry Installation</a><br>
+            <a href="html/lorryrental.html">Lorry Rental</a>
         </div>
 
         <div class="footer-col">
             <h4 style="color: white;">LINKS</h4>
-            <a href="../html/about.html" target="_blank">About Us</a><br>
-            <a href="../html/service.html" target="_blank">Service</a><br>
-            <a href="../html/gallery.html" target="_blank">Gallery</a><br>
-            <a href="../html/contact.html" target="_blank">Contact Us</a>
+            <a href="html/about.html" target="_blank">About Us</a><br>
+            <a href="html/service.html" target="_blank">Service</a><br>
+            <a href="html/gallery.html" target="_blank">Gallery</a><br>
+            <a href="html/contact.html" target="_blank">Contact Us</a>
         </div>
     </div>
 
-	<hr class="footer-line">
-	
+    <hr class="footer-line">
     <p class="copyright" style="font-family:Rubik; text-align: center; margin-top: 20px; color: #ffffff; justify-content: center;">
         © 2025 Lee Hong Engineering Works. All Rights Reserved. Designed by Lee Zhi Hao.
     </p>
 </footer>
+
 </body>
 </html>

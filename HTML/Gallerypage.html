@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Lee Hong Engineering Works</title>
+<link rel="icon" type="image/x-icon" href="../Img/favicon_1.png">
+<link rel="stylesheet" href="../CSS/style.css">
+
+</head>
+
+<body>
+
+<!-- ✅ NAVIGATION BAR -->
+<header>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <li><a href="../HTML/Homepage.html" target="_blank"><img src="../Img/Logo_nav.png" alt="LH Engineering Logo"></a></li>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+
+		<div class="nav-center">
+	        <ul class="nav-links">
+            	<li><a href="../HTML/Aboutpage.html" target="_blank">ABOUT US</a></li>
+            	<li><a href="../HTML/Servicepage.html" target="_blank">SERVICE</a></li>
+            	<li><a href="../HTML/Gallerypage.html" target="_blank">GALLERY</a></li>
+            	<li><a href="../HTML/Contactuspage.html" target="_blank">CONTACT US</a></li>
+        	</ul>
+		</div>
+    </nav>
+</header>
+	
+<!-- ✅ HERO SECTION -->
+<section class="hero">
+
+	<div class="gallery-hero-bg"></div>
+
+	<!-- Centered Text -->
+	<div class="get-in-touch-box">
+    	<p>Our Engineering Works</p>
+    	<h2>GALLERY</h2>
+    </div>
+
+	<div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+</section>
+
+<section class="gallery">
+	<div class="gallery-header">
+		<h2>Our Past Experiences</h2>
+	</div>	
+	
+	<div class="gallery-container">
+    	<div class="gallery-wrapper">
+    	<button class="gallery-arrow left" id="prevBtn">&#10094;</button>
+
+    	<div class="gallery-track" id="galleryTrack">
+			<img src="../Img/factory_board.jpg" alt="#">
+			<img src="../Img/IMG_7021.jpg" alt="#">
+			<img src="../Img/IMG_7172.jpg" alt="#">
+			<img src="../Img/about-history.png" alt="#">
+			<img src="../Img/hero-img-3.jpg" alt="#">
+        	<img src="../Img/hero-img-2.jpg" alt="#">
+			<img src="../Img/why-choose-us-img.jpg" alt="#">
+        	<img src="../Img/backpusher.jpg" alt="#">
+			<img src="../Img/lorry-install-2.JPG" alt="#">
+			<img src="../Img/back_pusher.jpg" alt="#">
+			<img src="../Img/lorry-install.jpg" alt="#">
+			<img src="../Img/lorry-install-4.jpg" alt="#">
+			<img src="../Img/lorry-rental.jpg" alt="#">
+			<img src="../Img/lorry_onroad.jpg" alt="#">
+			<img src="../Img/lorry_hantu_front.jpg" alt="#">
+			<img src="../Img/lorry_hantu_back.jpg" alt="#">
+			<img src="../Img/lorry_hantu_sideview2.jpg" alt="#">
+			<img src="../Img/lorry_rental_1.jpg" alt="#">
+			<img src="../Img/lorry-repair-3.jpg" alt="#">
+			<img src="../Img/IMG_7108.jpg" alt="#">
+			<img src="../Img/IMG_7120.jpg" alt="#">
+        	<img src="../Img/hero-img-1.jpg" alt="#">
+        	<img src="../Img/hero-img-4.jpg" alt="#">
+			<img src="../Img/IMG_7264.jpg" alt="#">
+			<img src="../Img/IMG_7071.jpg" alt="#">
+			<img src="../Img/IMG_7033.jpg" alt="#">
+			<img src="../Img/IMG_7074.jpg" alt="#">
+			<img src="../Img/lorry-repair-2.jpg" alt="#">
+			<img src="../Img/IMG_7304 (1).jpg" alt="#">
+			<img src="../Img/black_oil1.jpg" alt="#">
+			<img src="../Img/changing_black_oil.jpg" alt="#">
+			<img src="../Img/black_oil3.jpg" alt="#">
+			<img src="../Img/black_oil2.jpg" alt="#">
+			<img src="../Img/IMG_7319.jpg" alt="#">
+			<img src="../Img/lorry_installation_1.jpg" alt="#">
+			<img src="../Img/lorry_hantu.jpg" alt="#">
+			<img src="../Img/what-we-do-img.jpeg" alt="#">
+			<img src="../Img/repair_meter3.jpg" alt="#">
+			<img src="../Img/meter_sparepart.jpg" alt="#">
+			<img src="../Img/check_oil1.jpg" alt="#">
+			<img src="../Img/lorry_hantu_side.jpg" alt="#">
+			<img src="../Img/IMG_7078 (1).jpg" alt="#">
+			<img src="../Img/IMG_0453.jpg" alt="#">
+			<img src="../Img/IMG_7038.jpg" alt="#">
+			<img src="../Img/IMG_0454.jpg" alt="#">
+			<img src="../Img/IMG_7029.jpg" alt="#">
+			<img src="../Img/IMG_7031.jpg" alt="#">
+			<img src="../Img/IMG_7263.jpg" alt="#">
+			<img src="../Img/IMG_7089.jpg" alt="#">
+			<img src="../Img/IMG_7094.jpg" alt="#">
+			<img src="../Img/IMG_7374.jpg" alt="#">
+			<img src="../Img/mission-vision.jpg" alt="#">
+    	</div>
+	</div>
+	
+		<!-- Simple Fullscreen Image Zoom Modal -->
+		<div id="imgModal" class="img-modal">
+    		<span class="close-btn">&times;</span>
+    		<img class="modal-content" id="modalImage" alt="#">
+		</div>
+    <button class="gallery-arrow right" id="nextBtn">&#10095;</button>
+</div>
+	
+	<button id="backToTop">↑</button>
+	<script>
+    const btn = document.getElementById("backToTop");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "flex";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    btn.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+	</script>
+	
+	<button id="scrollDown">↓</button>
+	<script>
+	const downBtn = document.getElementById("scrollDown");
+
+	/* 点击往下滑 600px（你可以调整） */
+	downBtn.onclick = function () {
+    window.scrollBy({
+        top: 600,
+        behavior: "smooth"
+		});
+	};
+	</script>
+</section>	
+
+<footer id="footer">
+
+	<div class="footer-top">
+		<div class="footer-text" style="padding: 40px 80px">
+			<h2 style="color: #FFFFFF; font-family: 'Fira Sans Medium'; font-size: 40px; font-weight: 500;">GET STARTED WITH US</h2><br>
+     		<a href="../HTML/Contactuspage.html" target="_blank" class="btn-orange" style="font-family: 'Fira Sans Medium'; font-weight: 300;">Contact Us</a>
+		</div>
+	</div>
+
+    <div class="footer-content">
+        <div class="footer-col">
+            <a href="../HTML/Homepage.html"><img src="../Img/footer-logo.png" alt="footer-logo" class="footer-logo"></a>
+            <p>We are here to keep your lorry safe, reliable, and road-ready.</p>
+			<div class="social-media-icon">
+				<a href="https://www.facebook.com/profile.php?id=100063841941473" target="_blank"><img src="../Img/facebook-white.png" alt="facebook icon"></a>
+				<a href="https://www.instagram.com/jian_jzl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="../Img/instagram-white.png" alt="instagram icon"></a>
+				<a href="https://www.tiktok.com/@lzj1125?_r=1&_t=ZS-923WlDM2mSG" target="_blank"><img src="../Img/tiktok-white.png" alt="tiktok icon"></a>
+			</div>
+        </div>
+
+        <div class="footer-col">
+            <h4 style="color: white;">OFFICE</h4>
+			<div class="location">
+				<img src="../Img/maps-and-flags-icon.png" alt="location icon">
+            	<a href="https://maps.app.goo.gl/ENGpoYV7YYNBGUQVA" target="_blank"><p>Plot 16050, Jalan, 31550 <br> Batu Gajah, Perak</p></a>
+			</div>
+			
+			<div class="phone">
+				<img src="../Img/whatsapp-icon.png" alt="whatsapp-icon">
+				<div class="contact-number">
+					<a href="https://wa.me/60125188117" target="_blank"><p style="padding-bottom: 0px;">+60 12-5188117 <br> <span>(Mr. Lee Chee Heng)</span></p></a> 
+					<a href="https://wa.me/60165173297" target="_blank"><p>+60 16-5173297 <br> <span>(Mr. Lee Zhi Jian)</span></p></a>
+				</div>
+			</div>
+        </div>
+
+        <div class="footer-col">
+            <h4 style="color: white;">SERVICES</h4>
+            <a href="../HTML/Lorryrepairpage.html">Lorry Repair</a><br>
+            <a href="../HTML/Lorryinstallationpage.html">Lorry Installation</a><br>
+            <a href="../HTML/Lorryrentalservice.html">Lorry Rental</a>
+        </div>
+
+        <div class="footer-col">
+            <h4 style="color: white;">LINKS</h4>
+            <a href="../HTML/Aboutpage.html" target="_blank">About Us</a><br>
+            <a href="../HTML/Servicepage.html" target="_blank">Service</a><br>
+            <a href="../HTML/Gallerypage.html" target="_blank">Gallery</a><br>
+            <a href="../HTML/Contactuspage.html" target="_blank">Contact Us</a>
+        </div>
+    </div>
+
+	<hr class="footer-line">
+	
+    <p class="copyright" style="font-family:Rubik; text-align: center; margin-top: 20px; color: #ffffff; justify-content: center;">
+        © 2025 Lee Hong Engineering Works. All Rights Reserved. Designed by Lee Zhi Hao.
+    </p>
+</footer>
+<script>
+/* -----------------------------
+   GALLERY SLIDER ARROWS
+------------------------------ */
+const track = document.getElementById("galleryTrack");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+let index = 0;
+const images = document.querySelectorAll("#galleryTrack img");
+const maxIndex = images.length - 1;
+
+/* Image width + gap */
+const imageWidth = 145 + 100; // adjust if needed
+	
+nextBtn.addEventListener("click", () => {
+    if (index < maxIndex) {
+        index++;
+        track.style.transform = `translateX(-${index * imageWidth}px)`;
+    }
+});
+
+prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+        index--;
+        track.style.transform = `translateX(-${index * imageWidth}px)`;
+    }
+});
+
+/* -----------------------------
+   IMAGE MODAL POPUP (FIXED)
+------------------------------ */
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close-btn");
+
+/* 所有 gallery 图片点击 */
+document.querySelectorAll(".gallery-container img").forEach(img => {
+    img.addEventListener("click", function () {
+        modal.style.display = "flex";  // 显示 modal
+        modalImg.src = this.src;       // 显示点击的图片
+    });
+});
+
+/* 点击关闭按钮 */
+closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+/* 点击空白区域关闭 modal */
+modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+	
+// 找到 Gallery Page 的主要 section
+const gallerySection = document.querySelector(".gallery");
+
+// 只在移动端执行
+document.addEventListener("scroll", function () {
+    if (window.innerWidth > 480) return; // 仅在手机屏幕执行
+
+    const header = document.querySelector("header");
+    if (!header || !gallerySection) return;
+
+    const sectionTop = gallerySection.getBoundingClientRect().top;
+
+    if (sectionTop <= 80) {
+        header.classList.add("move-up");
+    } else {
+        header.classList.remove("move-up");
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2056 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: "Rubik Medium";
+}
+
+body {
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+
+h1{
+	font-family: 'Rubik Medium';
+	font-style: bold;
+}
+
+h2{
+	font-family: 'Rubik Medium';
+	font-style: bold;
+	font-size: 54px;
+	color: #113F69;
+}
+
+h3{
+	font-family: 'Fira Sans Medium';
+	font-style: normal;
+}
+
+h4{
+	font-family: "Rethink Sans";
+	font-style: normal;
+	color: #113F69;
+}
+
+p{
+	font-family: "Rethink Sans";
+	font-size: 16px;
+}
+
+/* ✅ NAV BAR */
+header {
+    background: #061A2C;
+    position: absolute;
+    width: 60%;
+	margin: 20px auto;
+	justify-content: center;
+    z-index: 999;
+  	border-radius: 20px;
+	transform: translateX(35%);
+}
+
+.flex-container{
+	display: flex;
+  	justify-content: center;
+}
+
+.navbar {
+    max-width: 800px;
+    margin: auto;
+    padding: 15px 0px 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-center{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-logo img {
+    height: 45px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+	justify-content: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4c542;
+}
+
+/* ✅ Mobile menu */
+.hamburger { 
+	display: none; 
+	color: #fff; 
+	font-size: 28px; 
+	cursor: pointer; 
+}
+
+#menu-toggle { display: none; }
+
+/* ✅ HERO ROOT */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ✅ CENTERED HERO TEXT */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* get in touch box */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Img/contact-bg.jpg'); /* your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;   /* makes it fixed */
+    z-index: 1;
+}
+
+.get-in-touch-box {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);  /* dark grey transparent */
+    backdrop-filter: blur(20px);      /* blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 30px 120px 30px 200px;
+    border-radius: 0 15px 15px 0;
+    color: #fff;
+    z-index: 4;
+}
+
+.get-in-touch-box p {
+	font-family: Rubik;
+    font-size: 32px;
+    margin-bottom: 5px;
+    opacity: 0.85;
+}
+
+.get-in-touch-box h2 {
+    font-size: 48px;
+    margin: 0;
+    letter-spacing: 1px;
+	color: white;
+}
+
+/* ✅ GRADIENT OVERLAY */
+
+/* SHAPE 1 (left triangle) */
+.shape1 {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    z-index: 4;
+}
+
+/* SHAPE 2 (right triangle) */
+.shape2 {
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    z-index: 4;
+}
+
+/* SHAPE 3 (top gradient bar) */
+.shape3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+    background: linear-gradient(rgba(0,0,0,0.7), transparent);
+    z-index: 2;
+}
+
+/* ✅ SLIDESHOW WRAPPER */
+.hero-slideshow {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+	background: linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.50));
+    z-index: 1;
+}
+
+/* ✅ INDIVIDUAL SLIDES */
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: heroFade 12s infinite;
+}
+
+/* ✅ SLIDE TIMING */
+.hero-slide:nth-child(1) { animation-delay: 0s; }
+.hero-slide:nth-child(2) { animation-delay: 4s; }
+.hero-slide:nth-child(3) { animation-delay: 8s; }
+
+.hero-caption {
+    opacity: 0;
+    animation: textFade 12s infinite;
+    color: #fff;
+}
+
+.caption-1 { animation-delay: 0s; }
+.caption-2 { animation-delay: 4s; }
+.caption-3 { animation-delay: 8s; }
+
+@keyframes textFade {
+    0% { opacity: 0; transform: translateY(10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    30% { opacity: 1; }
+    40% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 0; }
+}
+/* ✅ FADE ANIMATION */
+@keyframes heroFade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* ✅ WELCOME */
+.welcome {
+    padding: 150px 0px;
+    text-align: center;
+}
+
+.wrapper{
+	margin-top: 30px;
+	display: flex; 
+	flex-wrap: wrap; 
+	align-items: center;       /* vertically align center */
+    justify-content: center;   /* horizontally align center */ 
+	gap: 5rem;
+}
+
+.welcome-box {
+    max-width: 400px;
+    background: #104474;
+	margin-top: 50px;
+    padding: 70px 30px;
+    border-radius: 10px;
+}
+
+.welcome-logo {
+    height: 10px;
+    margin-top: -90px;
+}
+
+/* ✅ WHAT WE DO */
+.what-we-do {
+	padding: 150px 0px;
+	width: auto;
+	display: grid;
+	justify-content: center;
+}
+
+.what-we-do-header{
+	margin-left: 200px;
+}
+
+.what-we-do-header p{
+	padding-right: 900px;
+}
+
+.wwd-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto 200px;
+}
+
+.wwd-list {
+    flex: 1;
+}
+
+.wwd-item {
+	display: flex;
+	align-items: center;
+    background: #104474;
+    margin-bottom: 12px;
+	padding-right: 100px;
+    font-weight: bold;
+	color: white;
+	white-space: nowrap;
+	box-sizing: border-box;
+	border-top-left-radius: 10px; 
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px; 
+	border-bottom-right-radius: 10px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.wwd-item:hover {
+    transform: scale(1.05);                /* slightly bigger */
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.wwd-item a:hover {
+    text-decoration: none;
+}
+
+.wwd-number {
+    background-color: #F06822;
+    padding: 15px 13px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 15px;
+}
+
+.wwd-text {
+    padding-right: 40px;  /* space after text */
+	font-family: 'Rethink Sans';
+	font-weight: 300;
+}
+
+.wwd-img img {
+    width: 80%;
+	margin-top: -150px;
+	margin-left: 150px;
+    border-radius: 20px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.wwd-img img:hover {
+    transform: scale(1.05);                /* slightly bigger */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* ✅ WHY CHOOSE US */
+.why-us {
+    background: #FFFACD;
+    padding: 60px 200px;
+}
+
+.why-title{
+    font-size: 54px;
+    font-weight: bold;
+    color: #113F69;
+    margin-bottom: 40px;
+}
+
+/* Main two-column layout */
+.why-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* Left image */
+.why-image img {
+    width: 380px;
+	height: 500px;
+	object-fit: cover;
+    border-radius: 20px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.why-image img:hover {
+    transform: scale(1.05);                /* slightly bigger */
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Right text area */
+.why-content {
+    flex: 1;
+}
+
+/* Each text row */
+.why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Icon style */
+.why-icon {
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+/* Headings on right */
+.why-item h3 {
+    margin-top: 6px;
+    font-size: 28px;
+    color: #123b6d;
+    font-weight: bold;
+}
+
+.why-item p {
+    margin-top: 8px;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Make cards stack vertically on the right */
+.why-grid-body {
+    flex-wrap: wrap;
+}
+
+.why-card {
+    width: 100%;
+}
+
+/* ✅ CORE VALUE */
+.core-value {
+    text-align: left;
+	margin: 100px 0;
+    padding: 60px 20px;
+    background: #ff6a00;
+    color: #fff;
+}
+
+.value-box {
+    display: flex;
+    gap: 1px;
+    max-width: 1500px;
+    margin: 20px 200px;
+	padding: 2px;
+	background: white;
+	border-radius: 20px;
+}
+
+.value-card {
+    background: #ff6a00;
+    color: white;
+	line-height: 1.8;
+    padding: 70px 50px;
+    border-radius: 20px;
+    width: 50%;
+	text-align: left;
+}
+
+/* ✅ SERVICES */
+.service {
+    padding: 60px 20px;
+	margin-bottom: 200px;
+    text-align: center;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+.service-card img {
+    width: 310px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.service-card img:hover {
+    transform: scale(1.05);                /* slightly bigger */
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.img-hover {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;   /* optional */
+    cursor: pointer;
+}
+
+.img-hover img {
+    width: 300px;
+    display: block;
+}
+
+/* Grey overlay */
+.hover-overlay {
+    position: absolute;
+    bottom: -100%;               /* start hidden */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* grey overlay */
+    transition: all 0.4s ease;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	cursor: pointer;
+}
+
+/* Slide up on hover */
+.img-hover:hover .hover-overlay {
+    bottom: 0;
+}
+
+.hover-text {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f06822;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;               /* hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+	z-index: 99999;
+}
+
+#backToTop:hover {
+    background-color: #ffffff;
+	color: #E83F25;
+	box-shadow: 0 0px 30px #E83F25;
+    transform: scale(1.3);
+}
+
+#scrollDown {
+    position: fixed;
+    bottom: 30px; /* 在 back to top 上面一点 */
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #f06822;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+#scrollDown:hover {
+    background-color: #ffffff;
+	color: #E83F25;
+	box-shadow: 0 0px 30px #E83F25;
+    transform: scale(1.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+	html, body {
+        overflow-x: hidden;
+    }
+	
+	section {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    /* ===== NAVBAR ===== */
+    header {
+    	position: fixed;
+    	width: 90%;
+    	left: 5%;
+    	transform: none;
+		z-index: 999;
+        transition: transform 0.3s ease;
+	}
+	
+	.nav-logo{
+		padding-left: 20px;
+	}
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+    	top: 70px;
+    	right: 0;       /* 从右边出现 */
+    	left: auto;     /* 禁用左边 */
+    	width: 200px;   /* 或者你想要的宽度 */
+    	background: #061A2C;
+    	flex-direction: column;
+    	gap: 20px;
+    	padding: 25px 0px 25px 0;
+    	display: none;
+		border-radius: 20px; /* 圆角调整，让右边更自然 */ 
+		text-align: center;
+    }
+
+    #menu-toggle:checked ~ .nav-center .nav-links {
+        transform: translateX(0); /* 展开到屏幕内 */
+    	display: flex;            /* 保留原本的 display flex */
+    }
+
+    .hamburger {
+        display: block;
+    	position: absolute;
+    	top: 15px;    /* 调整高度 */
+    	right: 20px;  /* 靠右 */
+    	z-index: 999; /* 保证在最上层 */
+    }
+	
+    /* ===== HERO（关键修复） ===== */
+    .hero {
+        height: 80vh;
+		justify-content: center;
+    }
+	
+	.hero-text{
+		width: 70%;
+	}
+	
+    .hero-text h1 {
+        font-size: 36px !important;
+        padding: 0 20px;
+    }
+
+    .hero-text p {
+        font-size: 20px !important;
+        padding: 0 25px;
+    }
+	
+    .shape1,
+    .shape2 {
+        height: 60px;
+    }
+
+    .shape3 {
+        height: 200vh;
+        background: linear-gradient(rgba(0,0,0,1.6), transparent);
+    }
+
+    /* ===== WELCOME ===== */
+    .welcome {
+		margin: 50px 0;
+        padding: 70px 20px;
+    }
+
+	.welcome h2{
+		font-size: 38px !important;
+	}	
+	
+    .wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .welcome-logo {
+        margin-top: 25px;
+		width: 300px;
+		height: auto;
+    }
+
+    .welcome-box {
+        margin-top: 0px;
+        padding: 30px 25px;
+    }
+
+    /* ===== WHAT WE DO（重点） ===== */
+    .what-we-do {
+		margin: 100px 0 150px;
+        padding: 0px 20px;
+    }
+	
+	.what-we-do h2{
+		font-size: 38px !important;
+	}
+
+    .what-we-do-header {
+        margin-left: 0;
+        padding: 0 20px;
+        text-align: left;
+		font-size: 38px !important;
+    }
+	
+	.what-we-do-header p{
+		padding-right: 0px!important;
+	}
+
+    .wwd-content {
+        margin: 0;
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .wwd-item {
+        padding-right: 20px;
+        font-size: 16px;
+    }
+	
+    .wwd-img img {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why-us {
+        padding: 60px 40px;
+    }
+
+    .why-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .why-image img {
+        justify-content: center;
+    }
+	
+	.why-title {
+        font-size: 38px !important;
+    }
+
+    .why-item h3 {
+        font-size: 18px !important;
+    }
+
+    .why-item p {
+        font-size: 16px;
+    }
+
+    /* ===== CORE VALUE（重点） ===== */
+    .core-value {
+        padding: 60px 40px;
+    }
+
+    .core-value h2 {
+		text-align: left !important;
+        margin-left: 0 !important;   /* 如果有 margin-left 被其他样式覆盖 */
+        margin-right: auto !important; /* 确保不居中 */
+        font-size: 38px !important;
+    }
+
+    .value-box {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .value-card {
+        width: 100%;
+        padding: 35px 30px;
+    }
+	
+	/* 或者针对每个卡片单独修改 */
+    .value-card:first-child {
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    .value-card:nth-child(2) {
+        border-radius: 0px !important;
+    }
+
+    .value-card:last-child {
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+    }
+
+    /* ===== SERVICE ===== */
+	.service{
+		margin: 100px 40px 200px;
+		padding: 0px !important;
+	}
+	
+	.service h2{
+		font-size: 38px!important;
+		text-align: left!important;
+	}
+	
+    .service-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+		max-width: 500px;
+		padding-right: 80px !important;
+    }
+
+    .service-card {
+        width: 100% !important;
+		height: 600% !important;
+        padding-top: 0 !important;
+    }
+	
+	.img-hover {
+        width: 100%;
+        height: 180px;            /* 手机可适当调节高度 */
+        overflow: hidden;
+        position: relative;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+    }
+	
+	.img-hover img{
+		width: 100% !important;
+        height: 100%;
+        object-fit: cover;       /* 保持比例，填满容器 */
+        display: block;
+	}
+	
+	.img-hover .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4); /* 半透明灰色 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1 !important;     /* 固定显示 */
+        transition: none !important; /* 移除 hover 动画 */
+    }
+
+    /* 可选：禁用阴影变化或动画 */
+    .img-hover {
+        box-shadow: 0 8px 15px rgba(0,0,0,0.4); /* 保持静态阴影 */
+        transition: none !important;
+    }
+	
+	.hover-text {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        z-index: 2;                /* 确保文字在灰色层前面 */
+        position: relative;
+    }
+	
+    #backToTop,
+    #scrollDown {
+        display: none !important;
+    }
+}
+
+/* ========== About HISTORY ========== */
+.abt-hero-bg{
+	position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Img/about-bg.jpg'); /* your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;   /* makes it fixed */
+    z-index: 1;
+}
+
+.history-section {
+    padding: 80px 200px;
+	margin: 100px auto;
+}
+
+.history-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.history-text h2 {
+    color: #113F69;
+    margin-bottom: 20px;
+}
+
+.history-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+	padding-bottom: 20px;
+}
+
+.history-image img {
+    width: 380px;
+    border-radius: 15px;
+	object-fit: cover;
+	height: 450px;
+	transition: transform 0.3s ease;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+	cursor: pointer;
+}
+
+.history-image img:hover {
+    transform: scale(1.05);                /* slightly bigger */
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Modal background */
+.img-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image inside modal */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* ========== MISSION & VISION ========== */
+.mission-vision-section {
+    background: #f47721;
+    padding: 80px 200px;
+	margin: 100px auto;
+}
+
+.mv-box {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+	margin: auto 100px;
+}
+
+.mv-box img {
+    width: 500px;
+	height: 400px;
+    border-radius: 20px;
+	object-fit: cover;
+}
+
+.mv-text {
+    color: white;
+	margin-top: 50px;
+}
+
+.mv-text h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+	margin-left: 40px;
+}
+
+.mv-text p {
+    margin-bottom: 50px;
+    line-height: 1.6;
+	padding-left: 40px;
+	padding-right: 50px;
+}
+
+
+/* ========== FOUNDERS ========== */
+.founders-section {
+    background: #F2EFD7;
+	margin: 100px 0 150px 0;
+    padding: 80px 200px;
+    text-align: center;
+}
+
+.founders-section h2 {
+    color: #113F69;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.founders-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+.founder-card img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.founder-card h4 {
+    margin-top: 15px;
+    font-size: 24px;
+	font-weight: bolder;
+}
+
+.founder-card p {
+    font-size: 16px;
+	padding-top: 10px;
+    color: #000000;
+}
+
+.founders-desc p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.4;
+	text-align: justify;
+	font-size: 15px;
+}
+
+/* Responsive */
+/* ========================== HISTORY ========================== */
+@media (max-width: 480px) {
+	
+	.abt-hero-bg {
+        background-position: center top; /* 手机上让背景对齐顶部 */
+    }
+	
+	.get-in-touch-box{
+		padding: 40px 40px 40px 40px;
+	}
+	
+	.get-in-touch-box p {
+        font-size: 16px;
+    }
+
+    .get-in-touch-box h2 {
+        font-size: 28px;
+    }
+	
+	.history-section {
+        padding: 40px 20px;
+    }
+
+    .history-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+		padding: 40px;
+    }
+
+    .history-text h2 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .history-text p {
+        font-size: 16px;
+        padding-bottom: 10px;
+        text-align: justify;
+    }
+
+    .history-image img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+    }
+
+    /* Modal remains the same for mobile */
+    .img-modal .modal-content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    .close-btn {
+        top: 15px;
+        right: 20px;
+        font-size: 32px;
+    }
+}
+
+/* ========================== MISSION & VISION ========================== */
+@media (max-width: 480px) {
+    .mission-vision-section {
+        padding: 40px 40px;
+        margin: 50px auto;
+    }
+
+    .mv-box {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0 auto;
+		padding: 50px 0;
+    }
+
+    .mv-box img {
+        width: 80%;
+        height: auto;
+		object-fit: cover;
+    }
+
+    .mv-text {
+        margin-top: 20px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .mv-text h3 {
+        font-size: 38px;
+        margin-left: 0;
+    }
+
+    .mv-text p {
+        font-size: 16px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 30px;
+		text-align: justify!important;
+    }
+}
+
+/* ========================== FOUNDERS ========================== */
+@media (max-width: 480px) {
+    .founders-section {
+        padding: 40px 40px;
+        margin: 50px 0 100px 0;
+    }
+
+    .founders-section h2 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .founders-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .founder-card img {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .founder-card h4 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .founder-card p {
+        font-size: 16px;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .founders-desc p {
+        font-size: 16px;
+        text-align: justify;
+        padding: 0 10px;
+    }
+}
+
+
+/* Service Page */
+.service-hero-bg{
+	position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Img/service-bg.jpg'); /* your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;   /* makes it fixed */
+    z-index: 1;
+}
+
+.service-showcase {
+    position: relative;
+    padding: 80px 0;
+	margin: 100px 0 200px 0;
+    background: #fff;
+    text-align: center;
+}
+
+/* service cards layout */
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* each card */
+.service-box {
+    width: 350px;
+    height: 460px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+	transition: transform 0.4s ease;
+}
+
+.service-box:hover {
+	transform: scale(1.1);                /* slightly bigger */
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.service-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.service-box:hover img {
+    transform: scale(1.1);
+}
+
+.service-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);   /* grey/black transparent layer */
+    z-index: 1;
+}
+
+.service-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;                   /* stay above grey layer */
+    text-shadow: 0 5px 20px rgba(0,0,0,0.7);
+}
+	
+/* Mobile Responsive for Service Page */
+@media screen and (max-width: 480px) {
+    
+    /* Service showcase padding adjustment */
+    .service-showcase {
+        padding: 40px 20px;
+        margin: 50px 0 100px 0;
+    }
+
+    /* Service cards layout vertical on mobile */
+    .service-cards {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    /* Each service box smaller */
+    .service-box a {
+        width: 90%;        /* 自适应屏幕宽度 */
+        height: 300px;     /* 缩小高度 */
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Image scaling */
+    .service-box img {
+        height: 100%;
+    }
+
+    /* Service title font smaller */
+    .service-title {
+        font-size: 38px;
+        text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    }
+}
+
+/* Lorry repair service */
+/* ================= SERVICE DETAILS LAYOUT ================= */
+.service-page-title {
+    text-align: center;        /* 水平居中 */
+    padding: 200px 20px 0px;  /* 上下间距 */
+}
+
+.service-page-title h1 {
+    font-size: 48px;
+    color: #113F69;
+    font-weight: bold;
+    margin: 0;
+}
+
+.service-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto 200px;
+    padding: 0 20px;
+}
+
+.service-image, .service-text {
+    flex: 1;
+}
+
+.service-image img {
+    width: 95%;
+	height: 450px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.service-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-text ul {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.service-text a.cta-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #E83F25;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+	text-decoration: none;  /* ✅ 去掉下划线 */
+}
+
+.service-text a.cta-btn:hover {
+    background-color: #f06822;
+    transform: scale(1.05);
+}
+
+/* ADDITIONAL INFO SECTION */
+.view-gallery {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f8f8;
+	margin-bottom: 200px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Img/about-bg.jpg");
+	background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+}
+
+.view-gallery h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.view-gallery p {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.6;
+    margin-bottom: 30px;
+	color: white;
+}
+
+.view-gallery a.cta-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #E83F25;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.view-gallery a.cta-btn:hover {
+	background-color: #ffffff;
+	color: #E83F25;
+	box-shadow: 0 0px 30px #E83F25;
+    transform: scale(1.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .service-details {
+        flex-direction: column;
+        text-align: center;
+		padding: 0 50px;   /* ⭐ 左右 40px */
+		margin-bottom: 100px!important;
+    }
+
+    .service-image, .service-text {
+        flex: 100%;
+		text-align: justify;
+    }
+
+    .service-text h1 {
+        font-size: 38px!important;
+    }
+	
+	.service-page-title{
+		padding: 100px 0 0 0!important;
+	}
+	
+	.service-page-title h1{
+		font-size: 30px;
+	}
+	
+	.view-gallery{
+		margin-bottom: 150px!important;
+	}
+}
+
+@media (max-width: 480px) {
+    .service-hero h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* Gallery */
+.gallery{
+	margin: 100px 0 200px 0;
+	padding: 10px 30px;
+	background: #ff6a00;
+}
+
+.gallery-hero-bg{
+	position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Img/service-bg.jpg'); /* your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;   /* makes it fixed */
+    z-index: 1;
+}
+
+.gallery-header h2{
+	justify-content: center;
+	display: flex;
+	padding-top: 100px;
+	color: white;
+}
+
+.gallery-container{
+	margin: 0px auto 100px auto;
+	width: 100%;
+	height: 550px;
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+	position: relative;   /* ✅ important */
+	overflow: hidden; /* ✅ hides overflow images */
+}
+
+.gallery-container img{
+	width: auto;
+	height: auto;
+	object-fit: cover;
+	border-radius: 20px;
+	transition: all ease-in-out 0.5s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);   /* zoom in */
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+	margin: 250px 0;
+}
+
+/* Arrow buttons */
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 24px;
+	width: 50px;       /* fixed width */
+    height: 50px;      /* fixed height */
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 4;
+	display: flex;     /* center arrow */
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-arrow.left {
+    left: 50px;    /* ✅ stays inside */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.gallery-arrow.left:hover{
+    box-shadow: 0 5px 30px white;
+}
+
+.gallery-arrow.right {
+    right: 50px;   /* ✅ stays inside */
+}
+
+.gallery-arrow.right:hover{
+    box-shadow: 0 5px 30px white;
+}
+
+/* Track row */
+.gallery-track {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.4s ease-in-out;
+	will-change: transform; /* improves animation */
+	padding-left: 91%;
+}
+
+.gallery-track img {
+    flex-shrink: 0;
+    width: 250px; /* 你可以改成你要的尺寸 */
+	height: 400px;
+}
+
+.gallery-container::before,
+.gallery-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 300px;             /* width of blur */
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.gallery-container::before {
+    left: 0;
+    background: linear-gradient(to right, #ff6a00 0%, rgba(255,255,255,0) 100%);
+}
+
+.gallery-container::after {
+    right: 0;
+    background: linear-gradient(to left, #ff6a00 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Fullscreen Modal */
+.img-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+	width: 100vw;                 /* 全屏宽 */
+    height: 100vh;                /* 全屏高 */
+}
+
+.modal-content {
+    width: 100vw;       /* 宽度占满屏幕 */
+    height: 100vh;      /* 高度占满屏幕 */
+    object-fit: cover;  /* 按比例裁剪铺满，不留空白 */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+	
+/* Mobile Responsive for Gallery Page */
+@media screen and (max-width: 480px) {
+	.gallery {
+        margin: 100px 0 100px 0;
+        padding: 10px 15px;
+    }
+
+    .gallery-header h2 {
+        padding-top: 50px;
+        font-size: 38px!important;
+    }
+
+    .gallery-container {
+        height: auto;       /* 高度自适应 */
+        flex-direction: column;
+        overflow: visible;  /* 避免被裁掉 */
+        padding-left: 0;
+        padding-right: 0;
+        gap: 15px;
+    }
+
+    .gallery-container img {
+        width: 90%;         /* 自适应屏幕宽度 */
+        height: 200px;      /* 缩小高度 */
+        margin: 0 auto;     /* 居中 */
+    }
+
+    .gallery-wrapper {
+        flex-direction: column;
+        margin: 50px 0;
+        gap: 10px;
+    }
+
+    /* 隐藏左右箭头 */
+    .gallery-arrow {
+        display: none;
+    }
+
+    .gallery-track {
+        padding-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .gallery-track img {
+        width: 45%;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .gallery-container::before,
+    .gallery-container::after {
+        display: none;  /* 去掉渐变遮罩 */
+    }
+
+    .modal-content {
+        max-width: 95vw;
+        max-height: 60vh;  /* 手机屏幕适配 */
+    }
+}
+
+/* Contact Us */
+.info-section {
+    background: rgba(240, 104, 34, 0.3);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 60px 20px;
+}
+
+.info-wrapper {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Box styles */
+.info-box {
+    width: 45%;
+}
+
+.info-box h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+/* Rows → 关键修改点 */
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;                /* 左右间距 */
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* 左边 label 固定宽度 */
+.info-row span:first-child {
+    min-width: 150px;         /* 控制对齐 */
+    font-weight: 500;
+}
+
+/* 右边内容自然对齐 */
+.info-row span:last-child {
+    flex: 1;
+    line-height: 1.3;
+}
+
+/* Middle vertical line */
+.info-divider {
+    width: 2px;
+    background: #333;
+    height: 150px;
+}
+
+
+@media (max-width: 480px) {
+
+    /* Section spacing */
+    .info-section {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 40px 15px;
+    }
+
+    /* Wrapper → column layout */
+    .info-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+		margin: 0 40px;
+    }
+
+    /* Box full width */
+    .info-box {
+        width: 100%;
+    }
+
+    /* Title size */
+    .info-box h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+	
+	.info-box:not(:last-child) {
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(0,0,0,1.0);
+    }
+
+    /* Row text */
+    .info-row {
+        font-size: 16px;
+        line-height: 1.2!important;
+    }
+	
+	.info-row span:first-child {
+        min-width: 150px!important;
+    }
+
+    /* Hide middle divider */
+    .info-divider {
+        display: none;
+    }
+}
+
+.map-section {
+    width: 100%;
+    height: auto;
+	margin: 100px 0 200px 0;
+}
+
+.map-section iframe {
+    display: block;
+}
+
+@media (max-width: 480px) {
+
+    .map-section {
+        margin: 50px 0px 150px 0px;
+        padding: 0 15px; /* 防止贴边 */
+    }
+
+    .map-section iframe {
+        width: 100%;
+        height: 300px; /* 手机合适高度 */
+        border-radius: 10px; /* 视觉更柔和（可选） */
+    }
+}
+
+/* ✅ FOOTER */
+
+footer {
+    background: #061A2C;
+    color: #fff;
+    padding: 50px 20px 20px;
+	z-index: -99;
+	height: auto;
+}
+
+.footer-top {
+    text-align: left;
+	margin: -140px 200px;
+	border-radius: 20px;
+	height: 200px;
+	background: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),url("../Img/footer-top-bg.jpg") no-repeat center center;
+	background-size: cover;
+	z-index: 3;
+}
+
+.footer-text{
+	justify-content: center;
+	padding: 20px;
+}
+
+.btn-orange {
+    background: #E83F25;
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.btn-orange:hover {
+    transform: scale(1.05);                /* slightly bigger */
+    box-shadow: 0 0px 20px #E83F25;
+	color: #E83F25;
+	background: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: auto;
+    margin: 200px 50px 30px 200px;
+}
+
+.footer-col {
+    width: 22%;
+    margin-bottom: 20px;
+	line-height: 1.8;
+}
+
+.location {
+    display: flex;
+    align-items: center;   /* vertically align icon + text */
+    gap: 10px;             /* space between icon and text */
+	padding-bottom: 20px;
+}
+
+.location img {
+    width: 30px;
+    height: auto;
+}
+
+.phone{
+	display: flex;
+    align-items: flex-start;   /* vertically align icon + text */
+    gap: 10px;             /* space between icon and text */
+}
+
+.phone img {
+    width: 30px;
+    height: auto;
+	padding-top: 5px;
+}
+
+.social-media-icon{
+	padding-top: 10px;
+}
+
+.social-media-icon img{
+	width: 30px;
+	height: auto;
+	padding-right: 5px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.social-media-icon img:hover {
+    transform: scale(2.05);                /* slightly bigger */
+}
+
+.footer-col h4{
+	font-family: "Fira Sans Medium";
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+
+.footer-logo {
+    height: 55px;
+    margin-bottom: 10px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+.footer-logo:hover {
+    transform: scale(1.15);                /* slightly bigger */
+}
+
+.footer-col a {
+	font-family: "Rubik";
+    font-size: 16px;
+    text-decoration: none;   /* removes underline */
+    color: #fff;             /* optional: makes text white */
+}
+
+.footer-col a:hover {
+    text-decoration: none;
+	color: #f4c542;
+}
+
+.footer-line {
+    border: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    width: auto;
+    margin: 20px;
+}
+
+/* ✅ RESPONSIVE ≤480px */
+@media (max-width: 480px) {
+
+
+    /* ===== FOOTER TOP BANNER ===== */
+    .footer-top {
+        margin: -100px 20px 40px 20px!important;        /* ❌ 移除负 margin */
+        height: auto;
+        padding: 30px 20px;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    .footer-text {
+        padding: 0;
+        text-align: center;
+    }
+
+	.footer-text h2{
+		font-size: 32px !important;
+	}
+	
+    .footer-text h2,
+    .footer-text p {
+        text-align: center;
+    }
+
+    .btn-orange {
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    /* ===== FOOTER CONTENT ===== */
+    .footer-content {
+        flex-direction: column;   /* 垂直排列 */
+        margin: 0 20px!important;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .footer-col h4 {
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+	
+	.footer-col p{
+		font-size: 18px;
+		padding: 0 10px;
+	}
+
+    /* ===== LOGO ===== */
+    .footer-logo {
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    /* ===== LOCATION & PHONE ===== */
+	.location{
+		padding-left: 30px;
+	}
+	
+	.location,
+    .phone {
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .phone {
+        align-items: flex-start;
+    }
+
+    /* ===== SOCIAL ICON ===== */
+    .social-media-icon {
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .social-media-icon img {
+        transform: none;
+    }
+
+    .social-media-icon img:hover {
+        transform: scale(1.2); /* mobile 轻一点 */
+    }
+
+    /* ===== LINKS ===== */
+    .footer-col a {
+        font-size: 18px !important;
+    }
+
+    /* ===== DIVIDER ===== */
+    .footer-line {
+        margin: 30px 0 15px;
+    }
+}

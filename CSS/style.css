@@ -1245,6 +1245,7 @@ header {
     .founder-card h4 {
         font-size: 20px;
         text-align: center;
+		font-weight: 900;
     }
 
     .founder-card p {
@@ -1253,6 +1254,14 @@ header {
         padding-top: 5px;
     }
 
+	.founder-card span{
+		font-weight: 900;
+	}
+
+	.founders-desc span{
+		font-weight: 900;
+	}
+	
     .founders-desc p {
         font-size: 16px;
         text-align: justify;

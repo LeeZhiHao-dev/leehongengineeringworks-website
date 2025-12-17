@@ -1734,8 +1734,8 @@ header {
     }
 
     .gallery-track img {
-        width: 45%;
-        height: 200px;
+        width: auto!important;
+        height: auto!important;
         margin-bottom: 10px;
     }
 

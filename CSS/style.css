@@ -20,13 +20,15 @@ body {
 
 
 h1{
-	font-family: 'Rubik Medium';
-	font-style: bold;
+	font-family: "rubik", sans-serif;
+	font-weight: 700;
+	font-style: normal;
 }
 
 h2{
-	font-family: 'Rubik Medium';
-	font-style: bold;
+	font-family: "rubik", sans-serif;
+	font-weight: 700;
+	font-style: normal;
 	font-size: 54px;
 	color: #113F69;
 }

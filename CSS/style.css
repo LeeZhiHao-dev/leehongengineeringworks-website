@@ -1783,8 +1783,8 @@ header {
 .info-row {
     display: flex;
     align-items: flex-start;
-    gap: 24px;                /* 左右间距 */
-    margin-bottom: 15px;
+    gap: 4px;                /* 左右间距 */
+    margin-bottom: 30px;
     font-size: 16px;
 }
 

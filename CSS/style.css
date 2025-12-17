@@ -1796,7 +1796,7 @@ header {
 /* 左边 label 固定宽度 */
 .info-row span:first-child {
     min-width: 150px;         /* 控制对齐 */
-    font-weight: 500;
+    font-weight: 900;
 }
 
 /* 右边内容自然对齐 */

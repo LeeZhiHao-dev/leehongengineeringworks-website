@@ -320,6 +320,12 @@ header {
     border-radius: 10px;
 }
 
+.welcome-box p{
+	color: white; 
+	text-align: left;
+	font-size: 15px;
+}
+
 .welcome-logo {
     height: 10px;
     margin-top: -90px;

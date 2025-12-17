@@ -323,7 +323,7 @@ header {
 .welcome-box p{
 	color: white; 
 	text-align: left;
-	font-size: 15px;
+	font-size: 16px;
 }
 
 .welcome-logo {
@@ -421,7 +421,7 @@ header {
 }
 
 .why-title{
-    font-size: 54px;
+    font-size: 50px;
     font-weight: bold;
     color: #113F69;
     margin-bottom: 40px;
@@ -758,6 +758,12 @@ header {
         padding: 30px 25px;
     }
 
+	.welcome-box p{
+		color: white; 
+		text-align: left;
+		font-size: 15px;
+	}
+
     /* ===== WHAT WE DO（重点） ===== */
     .what-we-do {
 		margin: 100px 0 150px;
@@ -811,7 +817,7 @@ header {
     }
 	
 	.why-title {
-        font-size: 38px !important;
+        font-size: 35px !important;
     }
 
     .why-item h3 {
@@ -821,6 +827,11 @@ header {
     .why-item p {
         font-size: 16px;
     }
+
+	.why-icon {
+    font-size: 22px;
+    margin-top: 4px;
+	}
 
     /* ===== CORE VALUE（重点） ===== */
     .core-value {
@@ -2010,7 +2021,7 @@ footer {
     }
 
     .footer-text {
-        padding: 0;
+        padding: 0 20px;
         text-align: center;
     }
 

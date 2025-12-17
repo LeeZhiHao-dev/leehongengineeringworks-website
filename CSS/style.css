@@ -62,6 +62,13 @@ h4{
 	color: #113F69;
 }
 
+.rethink-sans-<uniquifier> {
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 p{
 	font-family: "Rethink Sans";
 	font-size: 16px;

@@ -120,7 +120,37 @@
     </div>
     
     <button id="backToTop">↑</button>
-    <button id="scrollDown">↓</button>
+	<script>
+    const btn = document.getElementById("backToTop");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "flex";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    btn.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+	</script>
+	
+	<button id="scrollDown">↓</button>
+	<script>
+	const downBtn = document.getElementById("scrollDown");
+
+	/* 点击往下滑 600px（你可以调整） */
+	downBtn.onclick = function () {
+    window.scrollBy({
+        top: 600,
+        behavior: "smooth"
+		});
+	};
+	</script>
 </section>  
 
 <footer id="footer">

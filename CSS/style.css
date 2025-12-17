@@ -1013,8 +1013,8 @@ header {
 
 /* Image inside modal */
 .modal-content {
-    max-width: 90%;
-    max-height: 90%;
+    width: auto;
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
 }

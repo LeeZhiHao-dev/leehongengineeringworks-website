@@ -1430,6 +1430,11 @@ header {
     margin-bottom: 30px;
 }
 
+.service-text span {
+	font-family: 'firs-sans';
+	font-weight: 500;
+}
+	
 .service-text a.cta-btn {
     display: inline-block;
     padding: 12px 30px;

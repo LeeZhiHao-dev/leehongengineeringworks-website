@@ -1684,8 +1684,6 @@ header {
 }
 
 .modal-content {
-    width: 100vw;       /* 宽度占满屏幕 */
-    height: 100vh;      /* 高度占满屏幕 */
     object-fit: cover;  /* 按比例裁剪铺满，不留空白 */
 }
 

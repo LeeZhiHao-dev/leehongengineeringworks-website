@@ -1472,6 +1472,11 @@ header {
 	color: white;
 }
 
+.view-gallery span{
+	font-family: 'fira-sans':
+	font-weight: 500;
+}
+
 .view-gallery a.cta-btn {
     display: inline-block;
     padding: 12px 30px;

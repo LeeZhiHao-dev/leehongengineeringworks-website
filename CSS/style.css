@@ -1803,6 +1803,8 @@ header {
 .info-row span:last-child {
     flex: 1;
     line-height: 1.3;
+	padding-left: 20px;
+	padding-top: 2px;
 }
 
 /* Middle vertical line */

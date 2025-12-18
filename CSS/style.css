@@ -1687,6 +1687,11 @@ header {
     object-fit: cover;  /* 按比例裁剪铺满，不留空白 */
 }
 
+.modal-content-2 {
+	width: auto;
+	height: 80%;
+}
+
 .close-btn {
     position: absolute;
     top: 20px;

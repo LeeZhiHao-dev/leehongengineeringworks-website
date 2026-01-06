@@ -1962,6 +1962,7 @@ footer {
     align-items: center;   /* vertically align icon + text */
     gap: 10px;             /* space between icon and text */
 	padding-bottom: 20px;
+	max-width: 200px;
 }
 
 .location img {
@@ -2099,7 +2100,8 @@ footer {
 
     /* ===== LOCATION & PHONE ===== */
 	.location{
-		padding-left: 30px;
+		padding-left: 90px;
+		max-width: 350px;
 	}
 	
 	.location,

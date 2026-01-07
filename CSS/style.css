@@ -331,7 +331,7 @@ header {
     margin-top: -90px;
 }
 
--container {
+.video-container {
 	padding-top: 200px;
   	padding-bottom: 20%;
   	height: 0;

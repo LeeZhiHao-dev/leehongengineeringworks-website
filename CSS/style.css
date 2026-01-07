@@ -331,6 +331,18 @@ header {
     margin-top: -90px;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 /* ✅ WHAT WE DO */
 .what-we-do {
 	padding: 150px 0px;

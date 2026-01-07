@@ -331,7 +331,7 @@ header {
     margin-top: -90px;
 }
 
-.video-container {
+-container {
 	padding-top: 200px;
   	padding-bottom: 25%;
   	height: 0;
@@ -354,7 +354,7 @@ header {
   .video-container iframe {
     width: auto;
     height: 50%;
-    left: 17%;
+    left: 15%;
   }
 }
 

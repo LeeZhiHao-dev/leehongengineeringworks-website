@@ -347,14 +347,14 @@ header {
 @media (max-width: 480px) {
   .video-container {
     padding-top: 50px;
-    padding-bottom: 250px; 
+    padding-bottom: 200px; 
     height: 0;
   }
 
   .video-container iframe {
     width: auto;
     height: 50%;
-    left: 15%;
+    left: 10%;
   }
 }
 

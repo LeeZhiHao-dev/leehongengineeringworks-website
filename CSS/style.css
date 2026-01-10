@@ -1727,7 +1727,7 @@ header {
 
 .modal-content-2 {
 	width: auto;
-	height: 80%;
+	height: 40%;
 }
 
 .close-btn {
@@ -1761,7 +1761,7 @@ header {
     }
 
     .gallery-container img {
-        width: 90%;         /* 自适应屏幕宽度 */
+        width: 80%;         /* 自适应屏幕宽度 */
         margin: 0 auto;     /* 居中 */
     }
 

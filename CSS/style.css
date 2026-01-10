@@ -1793,7 +1793,7 @@ header {
 
     .modal-content {
         max-width: 95vw;
-        max-height: 60vh;  /* 手机屏幕适配 */
+        max-height: auto;  /* 手机屏幕适配 */
     }
 }
 

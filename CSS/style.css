@@ -2006,6 +2006,10 @@ footer {
     height: auto;
 }
 
+.location-address {
+	
+}
+
 .phone{
 	display: flex;
     align-items: flex-start;   /* vertically align icon + text */

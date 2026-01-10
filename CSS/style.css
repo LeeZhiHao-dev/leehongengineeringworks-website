@@ -1761,7 +1761,7 @@ header {
     }
 
     .gallery-container img {
-        width: 80%;         /* 自适应屏幕宽度 */
+        width: 90%;         /* 自适应屏幕宽度 */
         margin: 0 auto;     /* 居中 */
     }
 

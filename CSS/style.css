@@ -2006,20 +2006,33 @@ footer {
     height: auto;
 }
 
-.location-address {
-	
+.phone {
+  margin-bottom: 14px;
 }
 
-.phone{
-	display: flex;
-    align-items: flex-start;   /* vertically align icon + text */
-    gap: 10px;             /* space between icon and text */
+.phone-link {
+  display: flex;
+  align-items: flex-start;      /* 对齐第一行文字 */
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  text-align: left;
 }
 
-.phone img {
-    width: 30px;
-    height: auto;
-	padding-top: 5px;
+.phone-link img {
+  width: 30px;
+  height: auto;
+  margin-top: 5px;              /* 微调 icon 对齐第一行 */
+}
+
+.contact-number p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.contact-number span {
+  font-size: 0.9em;
+  opacity: 0.9;
 }
 
 .social-media-icon{

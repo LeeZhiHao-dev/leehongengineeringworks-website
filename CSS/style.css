@@ -2159,15 +2159,20 @@ footer {
 	
 	.location,
     .phone {
-        justify-content: center;
+		padding-left: 40px;
         align-items: center;
         text-align: left;
+		max-width: 350px;
     }
 
     .phone {
         align-items: flex-start;
     }
 
+	.phone-link {
+    	justify-content: center; 
+    	align-items: flex-start; 
+  	}
     /* ===== SOCIAL ICON ===== */
     .social-media-icon {
         padding-top: 15px;

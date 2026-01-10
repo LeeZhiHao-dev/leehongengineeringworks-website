@@ -337,6 +337,10 @@ header {
   	height: 0;
 }
 
+.video-container h2{
+	padding-bottom: 20px;
+}
+
 .video-container iframe {
   	position: absolute;
   	width: 50%;
@@ -1758,7 +1762,6 @@ header {
 
     .gallery-container img {
         width: 90%;         /* 自适应屏幕宽度 */
-        height: 200px;      /* 缩小高度 */
         margin: 0 auto;     /* 居中 */
     }
 
@@ -1792,8 +1795,7 @@ header {
     }
 
     .modal-content {
-        max-width: 95vw;
-        max-height: auto;  /* 手机屏幕适配 */
+        height: auto;  /* 手机屏幕适配 */
     }
 }
 

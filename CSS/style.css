@@ -1987,7 +1987,7 @@ footer {
 
 .location {
     display: flex;
-    align-items: center;   /* vertically align icon + text */
+    align-items: flex-start;   /* vertically align icon + text */
     gap: 10px;             /* space between icon and text */
 	padding-bottom: 20px;
 	max-width: 200px;

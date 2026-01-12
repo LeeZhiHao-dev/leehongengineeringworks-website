@@ -1726,7 +1726,7 @@ header {
 }
 
 .modal-content-2 {
-	width: auto;
+	width: 80%;
 	height: auto;
 }
 
@@ -1796,6 +1796,10 @@ header {
 
     .modal-content {
         height: auto;  /* 手机屏幕适配 */
+
+	.modal-content-2 {
+		width: auto;
+		height: auto;
     }
 }
 
